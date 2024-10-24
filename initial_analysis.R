@@ -19,8 +19,6 @@ oil$date <- as.Date(oil$date, format = "%Y-%m-%d")
 transactions <- transactions %>% 
   mutate(date = as.Date(date, format = "%Y-%m-%d"))
 
-stores <- stores %>% 
-  mutate(date = as.Date(date, format = "%Y-%m-%d"))
 
 str(oil)
 str(train)
@@ -43,11 +41,13 @@ electronics_with_oil <- train %>%
 
 str(electronics_with_oil)
 
-ggplot(electronics_with_oil, aes(x = date, y = Value, colour = Variable, group = Variable)) +
+ggplot(electronics_with_oil, aes(x = date, y = Value, colour = Variable)) +
   geom_line() 
 
 
 str(oil)
 str(electronics_with_oil)  
+
+#asdfasdfasdfasdf
 
 #asdfasdfasdf
